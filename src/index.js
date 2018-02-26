@@ -6,10 +6,13 @@ module.exports = function longestConsecutiveLength(array) {
    		if(array[i]===array[i-1]+1){
    			cont++
    		} else{
-   			if(cont>1){
-   				tempArr.push(cont);
-   			}
-   			cont=1;
+        if(array[i]!==array[i-1]){
+            if(cont>1){
+             tempArr.push(cont);
+            }
+            cont=1;
+        } 
+	
    		}
    		
    		
